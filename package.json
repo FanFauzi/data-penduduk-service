@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
+    "test:test": "nodemon ./src/server.js dotenv/config -i",
     "start:dev": "nodemon ./src/server.js",
     "migrate": "node-pg-migrate"
   },
