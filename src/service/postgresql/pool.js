@@ -1,7 +1,6 @@
 /* istanbul ignore file */
 const { Pool } = require('pg');
-
-const connestionString = 'postgresql://datapenduduk330:CaLyxE9AKF3V@ep-gentle-heart-28962184.ap-southeast-1.aws.neon.tech/datpen?sslmode=require';
+require('dotenv').config();
 
 // const testConfig = {
 //   host: process.env.PGHOST,
@@ -12,7 +11,7 @@ const connestionString = 'postgresql://datapenduduk330:CaLyxE9AKF3V@ep-gentle-he
 // };
 
 const pool = new Pool({
-  connectionString: connestionString,
+  connectionString: process.env.PGHOST,
 });
 
 module.exports = pool;
