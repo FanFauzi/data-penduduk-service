@@ -1,7 +1,7 @@
 const routes = (handler) => [
   {
     method: 'POST',
-    path: 'https://data-penduduk-service.adaptable.app',
+    path: '/datpen',
     handler: (request, h) => handler.postDatpenHandler(request, h),
     options: {
       payload: {
