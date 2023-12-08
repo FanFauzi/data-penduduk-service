@@ -1,15 +1,15 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable camelcase */
-const { Pool } = require('pg');
 const { nanoid } = require('nanoid');
+const pool = require('./pool');
 const cloudinary = require('../../api/datpen/cloudinary');
 const InvariantError = require('../../exceptions/InvariantError');
 const NotFoundError = require('../../exceptions/NotFoundError');
 
 class DatpenService {
   constructor() {
-    this.pool = new Pool();
+    this.pool = pool;
   }
 
   async addDatpen({
