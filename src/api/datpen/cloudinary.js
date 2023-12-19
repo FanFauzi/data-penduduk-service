@@ -7,4 +7,13 @@ cloudinary.config({
   api_secret: process.env.CLOUD_API_SECRET,
 });
 
+// TEST
+// cloudinary.config(
+//   {
+//     cloud_name: process.env.CLOUD_IMAGE_NAME_TEST,
+//     api_key: process.env.CLOUD_API_KEY_TEST,
+//     api_secret: process.env.CLOUD_API_SECRET_TEST,
+//   },
+// );
+
 module.exports = cloudinary;

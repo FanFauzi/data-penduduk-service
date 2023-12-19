@@ -1,8 +1,6 @@
 require('dotenv').config();
 const Hapi = require('@hapi/hapi');
 const Inert = require('@hapi/inert');
-const cloudinary = require('cloudinary');
-// const { google } = require('googleapis');
 
 const datpen = require('./api/datpen');
 const DatpenService = require('./service/postgresql/DatpenService');
@@ -22,13 +20,13 @@ const init = async () => {
     },
   });
 
-  cloudinary.config(
-    {
-      cloud_name: process.env.CLOUD_IMAGE_NAME,
-      api_key: process.env.CLOUD_API_KEY,
-      api_secret: process.env.CLOUD_API_SECRET,
-    },
-  );
+  // cloudinary.config(
+  //   {
+  //     cloud_name: process.env.CLOUD_IMAGE_NAME,
+  //     api_key: process.env.CLOUD_API_KEY,
+  //     api_secret: process.env.CLOUD_API_SECRET,
+  //   },
+  // );
 
   await server.register([
     {
